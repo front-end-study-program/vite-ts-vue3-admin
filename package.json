@@ -1,0 +1,51 @@
+{
+  "name": "vite-ts-vue3-admin",
+  "version": "1.0.0",
+  "description": "这是个练习自己搭建工程化的项目",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "lint": "eslint --ext .ts,vue src/**"
+  },
+  "keywords": [
+    "vue3",
+    "vite",
+    "typescript",
+    "admin",
+    "jsx",
+    "tsx"
+  ],
+  "author": "眼圈发黑",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "@vitejs/plugin-vue": "^1.1.5",
+    "@vitejs/plugin-vue-jsx": "^1.1.3",
+    "@vue/compiler-sfc": "^3.0.7",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "chalk": "^4.1.1",
+    "eslint": "^7.25.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "less": "^4.1.1",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.3",
+    "vite": "^2.1.1",
+    "yorkie": "^2.0.0"
+  },
+  "dependencies": {
+    "ant-design-vue": "^2.1.2",
+    "vue": "^3.0.7"
+  },
+  "gitHooks": {
+    "commit-msg": "node scripts/verifyCommit.js",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{tsx,vue,ts}": "eslint --fix",
+    "*": "prettier -w -u"
+  }
+}
