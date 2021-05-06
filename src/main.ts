@@ -1,7 +1,8 @@
-import { createApp } from "vue";
-import App from "./App";
-import Antd from "ant-design-vue";
-import "ant-design-vue/dist/antd.css";
-import "./index.less";
+import { createApp } from 'vue';
+import App from './App';
+import registerAntdUIs from './antd-ui';
+import './index.less';
 
-createApp(App).use(Antd).mount("#app");
+const app = createApp(App);
+registerAntdUIs(app);
+app.mount('#app');

@@ -1,5 +1,5 @@
-import { defineComponent, ref } from "vue";
-import HelloWorld from "./components/HelloWorld";
+import { defineComponent, ref } from 'vue';
+import HelloWorld from './components/HelloWorld';
 export default defineComponent({
   setup() {
     const count = ref(0);
@@ -13,7 +13,6 @@ export default defineComponent({
   },
   render() {
     const { count, inc } = this;
-    console.log(123);
     return (
       <>
         <HelloWorld />
