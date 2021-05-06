@@ -18,6 +18,7 @@
   "author": "眼圈发黑",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^15.0.2",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "@vitejs/plugin-vue": "^1.1.5",
@@ -41,7 +42,7 @@
     "vue": "^3.0.7"
   },
   "gitHooks": {
-    "commit-msg": "node scripts/verifyCommit.js",
+    "commit-msg": "node scripts/verifyCommit.ts",
     "pre-commit": "lint-staged"
   },
   "lint-staged": {

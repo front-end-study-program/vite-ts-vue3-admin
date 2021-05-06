@@ -1,4 +1,4 @@
-# vite-ts-admin
+# vite-ts-vue3-admin
 
 1. 集成 vite (vite)
 2. 集成 vue3 (vue、@vitejs/plugin-vue、@vue/compiler-sfc)
@@ -11,4 +11,4 @@
 
 1. 集成 eslint (eslint、eslint-plugin-vue、@vue/eslint-config-typescript、@typescript-eslint/parser、@typescript-eslint/eslint-plugin) 已集成 待修复错误
 2. 集成 prettier (prettier、eslint-plugin-prettier、@vue/eslint-config-prettier) 已集成
-3. 配置 gitHooks 限制代码提交规范和代码格式规范 (yorkie、chalk、lint-staged)
+3. 配置 gitHooks 限制代码提交规范和代码格式规范 (yorkie、chalk、lint-staged) verifyCommit.ts git 提交的规则验证
