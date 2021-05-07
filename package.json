@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "lint": "eslint --ext .ts,vue src/**"
+    "lint": "eslint --ext .ts,tsx src/**",
+    "lint-less": "stylelint **/*.less --fix"
   },
   "keywords": [
     "vue3",
@@ -33,6 +34,11 @@
     "less": "^2.7.3",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
     "typescript": "^4.2.3",
     "vite": "^2.1.1",
     "vite-plugin-style-import": "^0.10.0",
@@ -47,7 +53,14 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{tsx,vue,ts}": "eslint --fix",
-    "*": "prettier -w -u"
+    "src/**/*.{tsx,ts}": [
+      "eslint --fix",
+      "prettier -w -u",
+      "git add"
+    ],
+    "src/**/*.less": [
+      "stylelint --fix",
+      "git add"
+    ]
   }
 }
