@@ -46,7 +46,9 @@
   },
   "dependencies": {
     "ant-design-vue": "^2.1.2",
-    "vue": "^3.0.7"
+    "vue": "^3.0.7",
+    "vue-router": "^4.0.6",
+    "vuex": "^4.0.0"
   },
   "gitHooks": {
     "commit-msg": "node scripts/verifyCommit.ts",
@@ -55,12 +57,10 @@
   "lint-staged": {
     "src/**/*.{tsx,ts}": [
       "eslint --fix",
-      "prettier -w -u",
-      "git add"
+      "prettier -w -u"
     ],
     "src/**/*.less": [
-      "stylelint --fix",
-      "git add"
+      "stylelint --fix"
     ]
   }
 }

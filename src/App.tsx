@@ -1,5 +1,5 @@
 import { defineComponent, ref } from 'vue';
-import HelloWorld from './components/HelloWorld';
+import { RouterView } from 'vue-router';
 export default defineComponent({
   setup() {
     const count = ref(0);
@@ -12,12 +12,10 @@ export default defineComponent({
     };
   },
   render() {
-    const { count, inc } = this;
+    console.log(this.$route);
     return (
       <>
-        <HelloWorld />
-        <div>{count}</div>
-        <button onClick={inc}>增加</button>
+        <RouterView />
       </>
     );
   },
