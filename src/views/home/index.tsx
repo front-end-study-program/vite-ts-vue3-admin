@@ -7,16 +7,15 @@ export default defineComponent({
     const inc = () => {
       store.commit('increment');
     };
-    return {
-      count,
-      inc,
-    };
-  },
-  render() {
-    const { count, inc } = this;
-    return (
+    window
+      .fetch('http://192.168.1.7:3000/api/user')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+    return () => (
       <>
-        {count}
+        {count.value}
         <div>hello home</div>
         <button onClick={inc}>增加</button>
       </>
