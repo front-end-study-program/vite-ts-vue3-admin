@@ -12,7 +12,6 @@ export default defineComponent({
     };
   },
   render() {
-    console.log(this.$route);
     return (
       <>
         <RouterView />

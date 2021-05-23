@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
+    "build": "vite build",
     "lint": "eslint --ext .ts,tsx src/**",
     "lint-less": "stylelint **/*.less --fix"
   },
@@ -28,6 +29,7 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "chalk": "^4.1.1",
+    "cross-env": "^7.0.3",
     "eslint": "^7.25.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.9.0",
@@ -47,6 +49,7 @@
   },
   "dependencies": {
     "ant-design-vue": "^2.1.2",
+    "axios": "^0.21.1",
     "mockjs": "^1.1.0",
     "vue": "^3.0.7",
     "vue-router": "^4.0.6",

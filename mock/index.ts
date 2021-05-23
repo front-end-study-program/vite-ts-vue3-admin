@@ -1,9 +1,9 @@
 import { MockMethod } from 'vite-plugin-mock';
 export default [
   {
-    url: '/api/user',
+    url: '/mock/user',
     method: 'get',
-    statusCode: 200,
+    statusCode: 401,
     response: () => ({
       code: 0,
       data: {
