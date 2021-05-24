@@ -20,6 +20,7 @@
   "author": "眼圈发黑",
   "license": "ISC",
   "devDependencies": {
+    "@types/js-cookie": "^2.2.6",
     "@types/node": "^15.0.2",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
@@ -50,7 +51,9 @@
   "dependencies": {
     "ant-design-vue": "^2.1.2",
     "axios": "^0.21.1",
+    "js-cookie": "^2.2.1",
     "mockjs": "^1.1.0",
+    "normalize.css": "^8.0.1",
     "vue": "^3.0.7",
     "vue-router": "^4.0.6",
     "vuex": "^4.0.0"

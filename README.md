@@ -1,5 +1,7 @@
 # vite-ts-vue3-admin
 
+仿 ant-design-pro 的后台管理系统
+
 1. 集成 vite (vite) 完成
 2. 集成 vue3 (vue、@vitejs/plugin-vue、@vue/compiler-sfc) 完成
 3. 集成 ts (typescript) 完成
@@ -11,6 +13,8 @@
 9. 集成 mock (mockjs、vite-plugin-mock) 完成
 10. 封装 axios 初步完成
 11. 环境变量 使用 vite import.meta.env 通过配置 .env[mode] 文件去配置一些环境变量，在 typings/env.d.ts 增加自定义环境变量的类型推导
+12. css 重置 (normalize.css)
+13. cookie 操作 (js-cookie)
 
 ## 代码格式化集成
 
@@ -28,3 +32,6 @@
 2. 主题切换
 3. 布局切换
 4. 国际化
+5. 字体图标库
+6. 水印
+7. 路由守卫-初步完成
