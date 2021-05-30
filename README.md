@@ -10,11 +10,12 @@
 6. 集成 less 完成
 7. 集成 vue-router (vue-router) 完成
 8. 集成 vuex (vuex) 完成
-9. 集成 mock (mockjs、vite-plugin-mock) 完成
+9. 集成 mock 数据 (mockjs、vite-plugin-mock) 完成
 10. 封装 axios 初步完成
-11. 环境变量 使用 vite import.meta.env 通过配置 .env[mode] 文件去配置一些环境变量，在 typings/env.d.ts 增加自定义环境变量的类型推导
-12. css 重置 (normalize.css)
-13. cookie 操作 (js-cookie)
+11. 环境变量 使用 vite import.meta.env 通过配置 .env[mode] 文件去配置一些环境变量，在 typings/env.d.ts 增加自定义环境变量的类型推导 完成
+12. css 重置 (normalize.css) 完成
+13. cookie 操作 (js-cookie) 完成
+14. composition-api 实用函数集合 (@vueuse/core) 完成
 
 ## 代码格式化集成
 
@@ -31,7 +32,7 @@
 1. 登录
 2. 主题切换
 3. 布局切换
-4. 国际化 (vue-i18n@next) 初步集成
+4. 国际化 (vue-i18n@next、@intlify/vite-plugin-vue-i18n) 初步集成 目前 @intlify/vite-plugin-vue-i18n 不支持 HMR。
 5. 字体图标库
 6. 水印
 7. 路由守卫-初步完成

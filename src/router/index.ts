@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import Login from '@/layout/login';
+import Login from '@/login';
 const constRoutes: RouteRecordRaw[] = [
   {
     path: '/login',

@@ -10,7 +10,7 @@ export default defineComponent({
         <div class={styles['header-wrapper']}></div>
         <div class={styles['form-wrapper']}>
           <a-form>
-            <a-form-item>
+            <a-form-item label={t('username')}>
               <a-input />
             </a-form-item>
             <a-button>{t('login')}</a-button>
