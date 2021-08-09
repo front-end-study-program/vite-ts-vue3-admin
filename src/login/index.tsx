@@ -1,21 +1,17 @@
 import { defineComponent } from '@vue/runtime-core';
 import styles from './index.module.less';
 import { useI18n } from 'vue-i18n';
-console.log(styles);
+import LocalSetting from '@/components/LocalSetting';
 export default defineComponent({
+  name: 'Login',
   setup() {
     const { t } = useI18n();
     return () => (
-      <div class={styles['login-wrapper']}>
-        <div class={styles['header-wrapper']}></div>
-        <div class={styles['form-wrapper']}>
-          <a-form>
-            <a-form-item label={t('username')}>
-              <a-input />
-            </a-form-item>
-            <a-button>{t('login')}</a-button>
-          </a-form>
+      <div class={styles.loginWrapper}>
+        <div class="login-wrapper-settings">
+          <LocalSetting />
         </div>
+        <div>{t('login')}</div>
       </div>
     );
   },

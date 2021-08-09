@@ -14,8 +14,9 @@
 10. 封装 axios 初步完成
 11. 环境变量 使用 vite import.meta.env 通过配置 .env[mode] 文件去配置一些环境变量，在 typings/env.d.ts 增加自定义环境变量的类型推导 完成
 12. css 重置 (normalize.css) 完成
-13. cookie 操作 (js-cookie) 完成
-14. composition-api 实用函数集合 (@vueuse/core) 完成
+13. css 模块化 vite 开箱支持 vscode css modules 插件增加联想提示
+14. cookie 操作 (js-cookie) 完成
+15. composition-api 实用函数集合 (@vueuse/core) 完成
 
 ## 代码格式化集成
 

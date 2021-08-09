@@ -20,7 +20,7 @@
   "author": "眼圈发黑",
   "license": "ISC",
   "devDependencies": {
-    "@intlify/vite-plugin-vue-i18n": "^2.1.2",
+    "@intlify/vite-plugin-vue-i18n": "^2.4.0",
     "@types/js-cookie": "^2.2.6",
     "@types/node": "^15.0.2",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
