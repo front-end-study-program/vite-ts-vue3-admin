@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Login from '@/login';
+import Analysis from '@/views/analysis';
 const constRoutes: RouteRecordRaw[] = [
   {
     path: '/login',
@@ -7,7 +8,12 @@ const constRoutes: RouteRecordRaw[] = [
   },
 ];
 
-const syncRoutes: RouteRecordRaw[] = [];
+const syncRoutes: RouteRecordRaw[] = [
+  {
+    path: '/dashboard/analysis',
+    component: Analysis,
+  },
+];
 
 const routes: RouteRecordRaw[] = [...constRoutes, ...syncRoutes];
 

@@ -1,0 +1,15 @@
+export default {
+  login_desc: 'Ant Design 是最具影响力的 Web 设计规范',
+  login_tabs_account: '账户密码登录',
+  login_tabs_mobile: '手机号登录',
+  login_accountInput: '账户',
+  login_passwordInput: '密码',
+  login_mobileInput: '手机号',
+  login_codeInput: '验证码',
+  login_getCode: '获取验证码',
+  login_autoLogin: '自动登录',
+  login_forgotYourPassword: '忘记密码',
+  login_loginBtn: '登录',
+  login_registerBtn: '注册账户',
+  login_otherLogin: '其他登录方式',
+};
