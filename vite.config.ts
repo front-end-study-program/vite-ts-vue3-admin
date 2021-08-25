@@ -23,12 +23,19 @@ export default defineConfig({
     viteMockServe({}),
     vueI18n({
       include: resolve(__dirname, 'src/locales/langs/**'),
+      globalSFCScope: true,
     }),
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
     alias: {
       '@': resolve(__dirname, 'src'),
+    },
+  },
+  css: {
+    modules: {
+      generateScopedName: '[local]_[hash:base64:5]',
+      localsConvention: 'camelCaseOnly',
     },
   },
 });

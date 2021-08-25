@@ -30,10 +30,10 @@
 
 ## 功能
 
-1. 登录
+1. 登录 完成
 2. 主题切换
 3. 布局切换
-4. 国际化 (vue-i18n@next、@intlify/vite-plugin-vue-i18n) 初步集成 目前 @intlify/vite-plugin-vue-i18n 不支持 HMR。
+4. 国际化 (vue-i18n@next、@intlify/vite-plugin-vue-i18n) 完成
 5. 字体图标库
 6. 水印
 7. 路由守卫-初步完成

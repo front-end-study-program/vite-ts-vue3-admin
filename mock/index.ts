@@ -11,4 +11,13 @@ export default [
       },
     }),
   },
+  {
+    url: '/mock/user/login',
+    method: 'post',
+    statusCode: 200,
+    response: () => ({
+      code: 0,
+      data: '123adsadsgft2123123123123',
+    }),
+  },
 ] as MockMethod[];

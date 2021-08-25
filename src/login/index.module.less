@@ -1,11 +1,77 @@
-.loginWrapper {
+.login-wrapper {
   height: 100%;
   background: #f0f2f5 url(@/assets/images/background.5825f033.svg) no-repeat 50%;
+  &-settings {
+    padding: 12px 24px 12px 0;
+    font-size: 18px;
+    text-align: right;
+  }
   :global {
-    .login-wrapper-settings {
-      padding: 12px 24px 12px 0;
-      font-size: 18px;
-      text-align: right;
+    .login-layout {
+      padding: 32px 0 24px;
+      .header {
+        text-align: center;
+        .logo {
+          height: 44px;
+          margin-right: 16px;
+          vertical-align: top;
+        }
+        .title {
+          color: #000000d9;
+          font-weight: 600;
+          font-size: 33px;
+          font-family: Avenir,Helvetica Neue,Arial,Helvetica,sans-serif;
+        }
+        .desc {
+          margin-top: 12px;
+          margin-bottom: 40px;
+          color: #00000073;
+          font-size: 14px;
+        }
+      }
+      .main {
+        width: 368px;
+        margin: 0 auto;
+        .ant-tabs-nav-wrap {
+          text-align: center;
+        }
+        .ant-input-affix-wrapper {
+          height: 40px;
+        }
+        .code-btn {
+          height: 40px;
+        }
+        .link-btn {
+          padding: 0;
+        }
+        .login-btn {
+          height: 40px;
+        }
+        .other-login-btn {
+          margin-left: 16px;
+          color: rgba(0,0,0,.2);
+          font-size: 24px;
+          cursor: pointer;
+          &:hover {
+            color: #1890ff;
+          }
+        }
+      }
+      .footer {
+        margin: 48px 0 24px;
+        color: rgba(0,0,0,.45);
+        font-size: 14px;
+        text-align: center;
+        .links {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 8px;
+          span {
+            padding: 0 10px;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }
