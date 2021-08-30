@@ -30,7 +30,7 @@
 
 ## 功能
 
-1. 登录 完成
+1. 登录 完成（还需要改造成 jsx vModel 指令的方式来做响应式）
 2. 主题切换
 3. 布局切换
 4. 国际化 (vue-i18n@next、@intlify/vite-plugin-vue-i18n) 完成
