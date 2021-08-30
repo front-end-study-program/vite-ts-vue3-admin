@@ -1,13 +1,8 @@
-import { defineComponent, KeepAlive } from 'vue';
+import { defineComponent } from 'vue';
 import { RouterView } from 'vue-router';
 export default defineComponent({
-  render() {
-    return (
-      <>
-        <KeepAlive>
-          <RouterView />
-        </KeepAlive>
-      </>
-    );
+  name: 'App',
+  setup() {
+    return () => <RouterView></RouterView>;
   },
 });

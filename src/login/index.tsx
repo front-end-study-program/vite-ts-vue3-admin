@@ -53,7 +53,7 @@ export default defineComponent({
           </div>
           <div class="main">
             <a-form ref={formRef} model={formState} rules={rules}>
-              <a-tabs activeKey={activeKey} onChange={setActiveKey}>
+              <a-tabs activeKey={activeKey.value} onChange={setActiveKey}>
                 <a-tab-pane key="account" tab={t('login_tabs_account')}>
                   <a-form-item name="accountVal">
                     <a-input
@@ -105,7 +105,10 @@ export default defineComponent({
               <a-form-item>
                 <a-row type="flex" justify="space-between" align="middle">
                   <a-col>
-                    <a-checkbox checked={autoLogin} onChange={setAutoLogin}>
+                    <a-checkbox
+                      checked={autoLogin.value}
+                      onChange={setAutoLogin}
+                    >
                       {t('login_autoLogin')}
                     </a-checkbox>
                   </a-col>
