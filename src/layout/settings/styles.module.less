@@ -1,0 +1,50 @@
+.setting-drawer-handle {
+  position: absolute;
+  top: 240px;
+  right: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+  font-size: 16px;
+  background: #1890ff;
+  border-radius: 4px 0 0 4px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.setting-drawer-title {
+  margin-bottom: 12px;
+  color: rgba(0,0,0,.85);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.setting-drawer-block-checkbox {
+  display: flex;
+  &-item {
+    position: relative;
+    margin-right: 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    img {
+      width: 48px;
+    }
+    &-check {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      padding-top: 18px;
+      padding-left: 14px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+  &-item_disabled{
+    cursor: not-allowed;
+  }
+}

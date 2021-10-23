@@ -1,6 +1,12 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import {
+  createRouter,
+  createWebHistory,
+  RouteRecordRaw,
+  RouterView,
+} from 'vue-router';
 import Login from '@/login';
 import Analysis from '@/views/analysis';
+import Layout from '@/layout';
 const constRoutes: RouteRecordRaw[] = [
   {
     path: '/login',
@@ -8,14 +14,32 @@ const constRoutes: RouteRecordRaw[] = [
   },
 ];
 
-const syncRoutes: RouteRecordRaw[] = [
+export const syncRoutes: RouteRecordRaw[] = [
   {
-    path: '/dashboard/analysis',
-    component: Analysis,
+    path: '/dashboard',
+    name: '仪表盘',
+    redirect: '/dashboard/analysis',
+    component: RouterView,
+    children: [
+      {
+        path: 'analysis',
+        name: '分析页',
+        component: Analysis,
+      },
+    ],
   },
 ];
 
-const routes: RouteRecordRaw[] = [...constRoutes, ...syncRoutes];
+const layoutRoutes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    component: Layout,
+    redirect: '/dashboard/analysis',
+    children: syncRoutes,
+  },
+];
+
+const routes: RouteRecordRaw[] = [...constRoutes, ...layoutRoutes];
 
 const router = createRouter({
   history: createWebHistory(),

@@ -75,7 +75,7 @@ export function useLoginForm(formRef: Ref): ILoginFormData {
         if (!res?.data) return;
         setToken(res.data);
         router.push({
-          path: '/dashboard/analysis',
+          path: '/dashboard',
         });
       })
       .catch((error: ValidateErrorEntity<IFormState>) => {
