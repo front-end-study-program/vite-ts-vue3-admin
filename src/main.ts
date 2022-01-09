@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import App from './App';
 import router from './router';
 import store from './store';
+import 'tailwindcss/tailwind.css';
 import 'normalize.css'; // 重置必要的 css 样式
 import registerAntdUIs from './antd-ui';
 import './antd-ui/index.less';
