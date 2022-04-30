@@ -1,4 +1,4 @@
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import BaseLayout from './BaseLayout';
 import TopLayout from './TopLayout';
 import useSettings from './settings/hooks/useSettings';

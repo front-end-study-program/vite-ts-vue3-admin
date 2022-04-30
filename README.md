@@ -17,7 +17,6 @@
 13. css 模块化 vite 开箱支持 vscode css modules 插件增加联想提示
 14. cookie 操作 (js-cookie) 完成
 15. composition-api 实用函数集合 (@vueuse/core) 完成
-16. 集成 TailWindCss 完成
 
 ## 代码格式化集成
 

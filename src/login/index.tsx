@@ -158,7 +158,7 @@ export default defineComponent({
               <span>隐私</span>
               <span>条款</span>
             </div>
-            <span>Copyright © 2021 vueComponent</span>
+            <span>Copyright © 2022 vueComponent</span>
           </div>
         </div>
       </div>
