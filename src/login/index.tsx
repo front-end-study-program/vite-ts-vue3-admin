@@ -13,6 +13,20 @@ import {
 } from '@ant-design/icons-vue';
 import { useCheckboxVal } from '@/hooks';
 import { useLoginForm } from './hooks/useLoginForm';
+import {
+  Button,
+  Form,
+  FormItem,
+  Tabs,
+  Input,
+  InputPassword,
+  Row,
+  Col,
+  Checkbox,
+} from 'ant-design-vue';
+
+const { TabPane } = Tabs;
+
 export default defineComponent({
   name: 'Login',
   setup() {
@@ -52,105 +66,100 @@ export default defineComponent({
             <div class="desc">{t('login_desc')}</div>
           </div>
           <div class="main">
-            <a-form ref={formRef} model={formState} rules={rules}>
-              <a-tabs activeKey={activeKey.value} onChange={setActiveKey}>
-                <a-tab-pane key="account" tab={t('login_tabs_account')}>
-                  <a-form-item name="accountVal">
-                    <a-input
+            <Form ref={formRef} model={formState} rules={rules}>
+              <Tabs activeKey={activeKey.value} onChange={setActiveKey}>
+                <TabPane key="account" tab={t('login_tabs_account')}>
+                  <FormItem name="accountVal">
+                    <Input
                       value={formState.accountVal}
-                      autocomplete="off"
                       prefix={<UserOutlined />}
                       placeholder={`${t('login_accountInput')}：admin`}
                       onInput={setAccountVal}
                     />
-                  </a-form-item>
-                  <a-form-item name="password">
-                    <a-input-password
+                  </FormItem>
+                  <FormItem name="password">
+                    <InputPassword
                       value={formState.password}
-                      autocomplete="off"
                       prefix={<LockOutlined />}
                       placeholder={`${t(
                         'login_passwordInput'
                       )}：admin or ant.design`}
                       onInput={setPassword}
                     />
-                  </a-form-item>
-                </a-tab-pane>
-                <a-tab-pane key="mobile" tab={t('login_tabs_mobile')}>
-                  <a-form-item name="mobile">
-                    <a-input
+                  </FormItem>
+                </TabPane>
+                <TabPane key="mobile" tab={t('login_tabs_mobile')}>
+                  <FormItem name="mobile">
+                    <Input
                       value={formState.mobile}
                       prefix={<MobileOutlined />}
                       placeholder={`${t('login_mobileInput')}`}
                       onInput={setMobile}
                     />
-                  </a-form-item>
-                  <a-row type="flex" justify="space-between">
-                    <a-col span={16}>
-                      <a-form-item name="code">
-                        <a-input
+                  </FormItem>
+                  <Row type="flex" justify="space-between">
+                    <Col span={16}>
+                      <FormItem name="code">
+                        <Input
                           value={formState.code}
                           prefix={<MailOutlined />}
                           placeholder={`${t('login_codeInput')}`}
                           onInput={setCode}
                         />
-                      </a-form-item>
-                    </a-col>
-                    <a-col span={7} offset={1}>
-                      <a-button class="code-btn">{t('login_getCode')}</a-button>
-                    </a-col>
-                  </a-row>
-                </a-tab-pane>
-              </a-tabs>
-              <a-form-item>
-                <a-row type="flex" justify="space-between" align="middle">
-                  <a-col>
-                    <a-checkbox
-                      checked={autoLogin.value}
-                      onChange={setAutoLogin}
-                    >
+                      </FormItem>
+                    </Col>
+                    <Col span={7} offset={1}>
+                      <Button class="code-btn">{t('login_getCode')}</Button>
+                    </Col>
+                  </Row>
+                </TabPane>
+              </Tabs>
+              <FormItem>
+                <Row type="flex" justify="space-between" align="middle">
+                  <Col>
+                    <Checkbox checked={autoLogin.value} onChange={setAutoLogin}>
                       {t('login_autoLogin')}
-                    </a-checkbox>
-                  </a-col>
-                  <a-col>
-                    <a-button class="link-btn" type="link">
+                    </Checkbox>
+                  </Col>
+                  <Col>
+                    <Button class="link-btn" type="link">
                       {t('login_forgotYourPassword')}
-                    </a-button>
-                  </a-col>
-                </a-row>
-              </a-form-item>
-              <a-form-item>
-                <a-button
+                    </Button>
+                  </Col>
+                </Row>
+              </FormItem>
+              <FormItem>
+                <Button
                   class="login-btn"
                   type="primary"
                   block
                   onClick={onLogin}
                 >
                   {t('login_loginBtn')}
-                </a-button>
-              </a-form-item>
-              <a-form-item>
-                <a-row type="flex" justify="space-between" align="middle">
-                  <a-col>
-                    <a-row>
-                      <a-col>
+                </Button>
+              </FormItem>
+              <FormItem>
+                <Row type="flex" justify="space-between" align="middle">
+                  <Col>
+                    <Row>
+                      <Col>
                         <span>{t('login_otherLogin')}</span>
-                      </a-col>
-                      <a-col>
+                      </Col>
+                      <Col>
                         <AlipayCircleOutlined class="other-login-btn" />
                         <TaobaoCircleOutlined class="other-login-btn" />
                         <WeiboCircleOutlined class="other-login-btn" />
-                      </a-col>
-                    </a-row>
-                  </a-col>
-                  <a-col>
-                    <a-button class="link-btn" type="link">
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col>
+                    <Button class="link-btn" type="link">
                       {t('login_registerBtn')}
-                    </a-button>
-                  </a-col>
-                </a-row>
-              </a-form-item>
-            </a-form>
+                    </Button>
+                  </Col>
+                </Row>
+              </FormItem>
+            </Form>
           </div>
           <div class="footer">
             <div class="links">

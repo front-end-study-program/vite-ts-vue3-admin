@@ -1,7 +1,7 @@
 import { defineComponent, reactive, VNodeChild } from 'vue';
 import { GlobalOutlined } from '@ant-design/icons-vue';
 import { useI18n } from 'vue-i18n';
-
+import { Menu, MenuItem, Dropdown } from 'ant-design-vue';
 interface MenuInfo {
   key: string;
   keyPath: string[];
@@ -21,15 +21,15 @@ export default defineComponent({
       localStorage.setItem('locale', key);
     };
     const DropDownMenu = (
-      <a-menu selectedKeys={selectLocals} onClick={onClick}>
-        <a-menu-item key="cn">cn 简体中文</a-menu-item>
-        <a-menu-item key="us">us English</a-menu-item>
-      </a-menu>
+      <Menu selectedKeys={selectLocals} onClick={onClick}>
+        <MenuItem key="cn">cn 简体中文</MenuItem>
+        <MenuItem key="us">us English</MenuItem>
+      </Menu>
     );
     return () => (
-      <a-dropdown overlay={DropDownMenu}>
+      <Dropdown overlay={DropDownMenu}>
         <GlobalOutlined />
-      </a-dropdown>
+      </Dropdown>
     );
   },
 });

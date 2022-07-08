@@ -7,6 +7,7 @@ import {
 import styles from './styles.module.less';
 import useSettings from './hooks/useSettings';
 import { navLayoutType, sliderThemeType } from '@/settings';
+import { Drawer, Tooltip, Divider } from 'ant-design-vue';
 export default defineComponent({
   name: 'Settings',
   setup() {
@@ -68,7 +69,7 @@ export default defineComponent({
       );
 
       return (
-        <a-drawer
+        <Drawer
           width="300"
           getContainer={document.querySelector('#setting-container')}
           visible={visible.value}
@@ -78,7 +79,7 @@ export default defineComponent({
           <h3 class={styles.settingDrawerTitle}>整体风格设置</h3>
           <div class={styles.settingDrawerBlockCheckbox}>
             {sliderThemeList.map((modeItem) => (
-              <a-tooltip title={modeItem.content}>
+              <Tooltip title={modeItem.content}>
                 <div
                   class={
                     modeItem.disabled
@@ -102,14 +103,14 @@ export default defineComponent({
                     v-show={sliderTheme.value === modeItem.theme}
                   />
                 </div>
-              </a-tooltip>
+              </Tooltip>
             ))}
           </div>
-          <a-divider />
+          <Divider />
           <h3 class={styles.settingDrawerTitle}>导航模式</h3>
           <div class={styles.settingDrawerBlockCheckbox}>
             {navModes.map((modeItem) => (
-              <a-tooltip title={modeItem.content}>
+              <Tooltip title={modeItem.content}>
                 <div
                   class={
                     modeItem.disabled
@@ -133,10 +134,10 @@ export default defineComponent({
                     v-show={navLayout.value === modeItem.mode}
                   />
                 </div>
-              </a-tooltip>
+              </Tooltip>
             ))}
           </div>
-        </a-drawer>
+        </Drawer>
       );
     };
   },

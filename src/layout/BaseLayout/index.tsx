@@ -3,6 +3,13 @@ import { RouterView } from 'vue-router';
 import Header from './Header';
 import Sider from './Sider';
 import styles from './styles.module.less';
+import {
+  Layout,
+  LayoutHeader,
+  LayoutContent,
+  LayoutFooter,
+  LayoutSider,
+} from 'ant-design-vue';
 
 export default defineComponent({
   name: 'BaseLayout',
@@ -19,27 +26,27 @@ export default defineComponent({
     };
 
     return () => (
-      <a-layout class={styles.baseLayout}>
-        <a-layout-sider
+      <Layout class={styles.baseLayout}>
+        <LayoutSider
           width="256"
           theme={props.sliderTheme}
           collapsed={isCollapsed.value}
         >
           <Sider theme={props.sliderTheme} />
-        </a-layout-sider>
-        <a-layout>
-          <a-layout-header>
+        </LayoutSider>
+        <Layout>
+          <LayoutHeader>
             <Header
               isCollapsed={isCollapsed.value}
               onToggleCollapsed={toggleCollapsed}
             />
-          </a-layout-header>
-          <a-layout-content>
+          </LayoutHeader>
+          <LayoutContent>
             <RouterView></RouterView>
-          </a-layout-content>
-          <a-layout-footer>Footer</a-layout-footer>
-        </a-layout>
-      </a-layout>
+          </LayoutContent>
+          <LayoutFooter>Footer</LayoutFooter>
+        </Layout>
+      </Layout>
     );
   },
 });

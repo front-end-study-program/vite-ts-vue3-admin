@@ -1,8 +1,8 @@
 import { defineComponent, PropType } from 'vue';
 import { RouteRecordRaw, useRouter } from 'vue-router';
-
-const SubMenu = defineComponent({
-  name: 'SubMenu',
+import { SubMenu, MenuItem } from 'ant-design-vue';
+const MySubMenu = defineComponent({
+  name: 'MySubMenu',
   props: {
     routes: {
       type: Array as PropType<RouteRecordRaw[]>,
@@ -30,13 +30,13 @@ const SubMenu = defineComponent({
         return (
           <>
             {route.children ? (
-              <a-sub-menu title={route.name} key={route.path}>
-                <SubMenu routes={route.children} parentPath={path} />
-              </a-sub-menu>
+              <SubMenu title={route.name as string} key={route.path}>
+                <MySubMenu routes={route.children} parentPath={path} />
+              </SubMenu>
             ) : (
-              <a-menu-item key={path} onClick={handleClick(route.path)}>
+              <MenuItem key={path} onClick={() => handleClick(route.path)}>
                 <span>{route.name}</span>
-              </a-menu-item>
+              </MenuItem>
             )}
           </>
         );
@@ -44,4 +44,4 @@ const SubMenu = defineComponent({
   },
 });
 
-export default SubMenu;
+export default MySubMenu;

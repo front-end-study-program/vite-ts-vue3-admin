@@ -1,17 +1,19 @@
-import { defineComponent, computed } from 'vue';
+import { defineComponent, computed, PropType } from 'vue';
 import { useRoute } from 'vue-router';
-import SubMenu from './SubMenu';
+import MySubMenu from './MySubMenu';
 import { syncRoutes } from '@/router';
+import { Menu, MenuTheme } from 'ant-design-vue';
+import { MenuMode } from '@/antd-ui/components';
 
 export default defineComponent({
   name: 'Menu',
   props: {
     mode: {
-      type: String,
+      type: String as PropType<MenuMode>,
       default: 'inline',
     },
     theme: {
-      type: String,
+      type: String as PropType<MenuTheme>,
       default: '',
     },
   },
@@ -24,14 +26,14 @@ export default defineComponent({
       return matched.map((matchItem) => matchItem.path);
     });
     return () => (
-      <a-menu
+      <Menu
         mode={props.mode}
         theme={props.theme}
         selectedKeys={selectedKeys.value}
         openKeys={openKeys.value}
       >
-        <SubMenu routes={syncRoutes} />
-      </a-menu>
+        <MySubMenu routes={syncRoutes} />
+      </Menu>
     );
   },
 });
