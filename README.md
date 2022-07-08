@@ -17,6 +17,7 @@
 13. css 模块化 vite 开箱支持 vscode css modules 插件增加联想提示
 14. cookie 操作 (js-cookie) 完成
 15. composition-api 实用函数集合 (@vueuse/core) 完成
+16. vite-plugin-inspect 可以看到 vite 插件对文件的更改对比
 
 ## 代码格式化集成
 
@@ -42,3 +43,4 @@
 
 1.其他文件类型的 ts 声明及路径提示
 2.layout 组件相关的东西还需优化
+3.vite-plugin-style-import 2.0 版本有个 consola 模块的依赖问题。之后插件升级在去掉
