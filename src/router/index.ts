@@ -4,13 +4,11 @@ import {
   RouteRecordRaw,
   RouterView,
 } from 'vue-router';
-import Login from '@/login';
-import Analysis from '@/views/analysis';
 import Layout from '@/layout';
 const constRoutes: RouteRecordRaw[] = [
   {
     path: '/login',
-    component: Login,
+    component: () => import('@/login/index'),
   },
 ];
 
@@ -24,7 +22,7 @@ export const syncRoutes: RouteRecordRaw[] = [
       {
         path: 'analysis',
         name: '分析页',
-        component: Analysis,
+        component: () => import('@/views/analysis'),
       },
     ],
   },
