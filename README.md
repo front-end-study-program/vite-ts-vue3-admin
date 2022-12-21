@@ -42,5 +42,7 @@
 ## TODO
 
 1.其他文件类型的 ts 声明及路径提示
+
 2.layout 组件相关的东西还需优化
+
 3.vite-plugin-style-import 2.0 版本有个 consola 模块的依赖问题。之后插件升级在去掉
